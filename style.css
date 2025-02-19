@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'QuicksandCustom';
+    src: url('assets/Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'QuicksandCustom';
+    src: url('assets/Light.ttf') format('truetype');
+    font-weight: light;
+    font-style: normal;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:  hsl(148, 38%, 91%);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    font-family: "Quicksand", serif;
+}
+
+.form-container {
+ width: 650px;
+ padding: 30px;
+ height: 630px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.form-group {
+  width: 100%;
+}
+.name-inputs {
+    display: flex;
+    gap: 10px;
+}
+.name-inputs input {
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(249, 10%, 26%);
+}
+input:not([type="checkbox"]):not([type="radio"]) {
+    border: 1px solid hsl(186, 15%, 59%);
+    padding: 10px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):hover,textarea:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+input:not([type="checkbox"]):not([type="radio"]):focus,textarea:focus {
+   outline : 1px solid hsl(169, 82%, 27%);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Quicksand",serif;
+    resize: none;
+    border: 1px solid hsl(186, 15%, 59%);
+    cursor: pointer;
+}
+
+#query {
+    display: flex;
+    gap: 10px;
+    margin: 8px 0;
+}
+.query-type {
+    border: 1px solid hsl(186, 15%, 59%);
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+input[type="radio"] {
+    accent-color: hsl(169, 82%, 27%);
+}
+h1 {
+    margin-bottom: 20px;
+}
+
+
+
+#cv-upload {
+    display:none; 
+    margin-top: 10px;
+  }
+
+button {
+    font-weight: bold;
+    color: hsl(0, 0%, 100%) ;
+    background-color: hsl(169, 82%, 27%);
+    padding: 15px 0;
+    border-radius: 5px;
+    border: 1px solid hsl(187, 24%, 22%);
+    margin: 40px ;
+    cursor: pointer;
+    width: 510px;
+}
+
+button:hover {
+    background-color: hsl(169, 82%, 16%);
+}
+
+.checkbox > div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    accent-color: hsl(169, 82%, 27%);
+    width: 15px;
+}
+
+span.error {
+    font: size 14px;
+    display: block;
+    color: red;
+}
+
+span.hidden {
+    display: none;
+}
+
+.radio-select {
+   background-color: hsl(148, 38%, 91%);
+   border: 1px solid hsl(169, 82%, 27%);
+}
+.star {
+    color: hsl(169, 82%, 27%);
+}
+#success-message {
+    display: none;
+    text-align: cenrte;
+    padding: 20px;
+    position: fixed;
+    
+  }
+#success-message span , p {
+    font-weight: bold;  
+}
+
+.success-icon {
+    width: 24px; 
+    height: 16px;
+  }
+
+  @media (max-width: 768px) { 
+    .name-inputs .form-group {
+        width: 100%; 
+    }
+    .query-type {
+        width: 100%;
+    }
+    button {
+        width: 100%; 
+        margin: 20px 0; 
+    }
+}
+
+@media (max-width: 480px) { 
+    h1 {
+        font-size: 1.5em; 
+    }
+    
+}
